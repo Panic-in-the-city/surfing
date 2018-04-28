@@ -1,0 +1,837 @@
+@font-face {
+  font-family: "League Spartan Bold";
+  src: url(../font/LeagueSpartan-Bold.otf);
+}
+
+@font-face {
+  font-family: "Playfair Display Bold";
+  src: url(../font/PlayfairDisplay-Bold.otf);
+}
+
+@font-face {
+  font-family: "Fira Sans Regular";
+  src: url(../font/FiraSans-Regular.otf);
+}
+
+@font-face {
+  font-family: "Playfair Display Regular";
+  src: url(../font/PlayfairDisplay-Regular.otf);
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  src: url(../font/Poppins-Light.otf);
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins Light', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	color: #a2a2a2;
+	background-color: #ffffff;
+	background-image: repeating-linear-gradient(to right, 
+										transparent -100px, transparent 150px, 
+										#f5f5f5 150px, #f5f5f5 151px);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+.wrapper {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.aside-wrapper {
+	position: relative;
+	width: 1345px;
+	margin: 0 auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+	position: relative;
+	padding-bottom: 10px;
+	border: none;
+	background-color: transparent;
+	font-family: 'League Spartan Bold', Arial, sans-serif;
+	font-size: 9px;
+	line-height: 66px;
+	text-transform: uppercase;
+	letter-spacing: 5px;	
+	color: #333333;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+	color: #5da8ef;
+}
+
+.button:not(.button-cost)::after {
+	content: ' ';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 96%;
+	height: 2px;
+	background-color: #5da8ef;
+}
+
+.main-header {
+	margin-bottom: 30px;
+}
+
+.main-header,
+.main-footer {
+	display: flex;
+	justify-content: space-between;
+	width: 608px;
+	margin-top: 38px;
+}
+
+.main-header-navigation,
+.main-footer-navigation,
+.side-heading {
+	font-family: 'League Spartan Bold', Arial, sans-serif;
+	font-size: 9px;
+	line-height: 66px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.main-header-navigation ul,
+.main-footer-navigation ul {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-header-navigation a,
+.main-footer-navigation a {
+	color: #000000;
+	opacity: 0.9;
+}
+
+.main-header-navigation a:hover,
+.main-footer-navigation a:hover {
+	color: #5da8ef;
+}
+
+.main-header-navigation a:active,
+.main-footer-navigation a:active {
+	opacity: 0.3;
+}
+
+.main-aside {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 100px;
+	right: 0;
+}
+
+.side-heading {
+	margin: 0;
+	opacity: 0.2;
+}
+
+.main-aside .side-heading {
+	display: block;
+	margin-top: 15px;
+	margin-right: -40px;
+	transform: rotate(270deg);
+}
+
+.main-social ul {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: space-between;
+	top: 575px;
+	right: 60px;
+	height: 125px;
+}
+
+.main-social ul,
+.footer-social ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-social img,
+.footer-social img {
+	opacity: 0;
+}
+
+.main-social li:first-of-type a,
+.footer-social li:first-of-type a {
+	background-image: url(../img/tumblr.png);
+	background-repeat: no-repeat;
+}
+
+.main-social li:first-of-type a:hover,
+.footer-social li:first-of-type a:hover {
+	background-image: url(../img/tumblr-hover.png);
+	background-repeat: no-repeat;
+}
+
+.main-social li:nth-of-type(2) a,
+.footer-social li:nth-of-type(2) a {
+	background-image: url(../img/twitter.png);
+	background-repeat: no-repeat;
+}
+
+.main-social li:nth-of-type(2) a:hover,
+.footer-social li:nth-of-type(2) a:hover {
+	background-image: url(../img/twitter-hover.png);
+	background-repeat: no-repeat;
+}
+
+.main-social li:last-of-type a,
+.footer-social li:last-of-type a {
+	background-image: url(../img/vimeo.png);
+	background-repeat: no-repeat;
+}
+
+.main-social li:last-of-type a:hover,
+.footer-social li:last-of-type a:hover {
+	background-image: url(../img/vimeo-hover.png);
+	background-repeat: no-repeat;
+}
+
+.promo-slider {
+	position: relative;
+	min-height: 610px;
+}
+
+.promo-slider ul {
+	margin: 0;
+	padding: 0;
+}
+
+.big-heading {
+	margin: 0;
+	font-family: 'Playfair Display Bold', Times New Roman, serif;
+	font-size: 42px;
+	line-height: 66px;
+	color: #333333;
+}
+
+.promo-slider-content {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.content-slide {
+	position: absolute;
+	margin-top: 160px;
+}
+
+.promo-slider-content p {
+	width: 395px;
+}
+
+.promo-slider-content .big-heading {
+	font-size: 62px;
+	line-height: 64px;
+}
+
+.big-heading > span {
+	font-family: 'League Spartan Bold', Arial, sans-serif;
+	font-size: 9px;
+	line-height: 50px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #5da8ef;
+}
+
+
+.promo-slider-content li img {
+	margin-left: 210px;
+	width: 916px;
+	height: 572px;
+	box-shadow: -25px 25px 60px 0 #d9d9d8;
+}
+
+.promo-slider-content > li {
+	position: absolute;
+}
+
+.promo-slider-content > li {
+	display: none;
+}
+
+.promo-slider-content > li:nth-of-type(2) .promo-slider-arrow-next {
+	right: 355px;
+}
+
+.promo-slider-content > .slide-showing {
+	display: block;
+}
+
+.promo-slider-pagination li {
+	position: relative;
+	margin-left: 12px;
+	list-style: none;
+	font-size: 10px;
+	line-height: 66px;
+	letter-spacing: 3px;
+	color: #f5f5f5;
+}
+
+.promo-slider-pagination .pagination-first-li {
+	margin-left: 15px;
+}
+
+.promo-slider-pagination li span {
+	color: #5da8ef;
+}
+
+.promo-slider-pagination li span:last-of-type {
+	color: #000000;
+}
+
+.button-pagination {
+	list-style: none;
+}
+
+.promo-slider-arrow {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.promo-slider-arrow:focus {
+	outline: none;
+}
+
+.promo-slider-arrow::before,
+.promo-slider-arrow::after {
+	content: ' ';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background-color: #f5f5f5;
+}
+
+.promo-slider-arrow::before {
+	width: 9px;
+	top: -5px;
+	left: 6px;
+	transform: rotate(45deg);
+}
+
+.promo-slider-arrow::after {
+	transform: rotate(-45deg);
+}
+
+.promo-slider-arrow-next {
+	position: absolute;
+	top: 437px;
+	left: 50px;
+}
+
+.promo-slider-arrow-back {
+	position: absolute;
+	top: 434px;
+	left: 9px;
+	transform: rotate(180deg);
+}
+
+.quote {
+	position: relative;
+	margin-top: 145px;
+	margin-bottom: 215px;
+}
+
+.quote::after {
+	content: ' ';
+	position: absolute;
+	bottom: -136px;
+	left: 567px;
+	height: 100px;
+	width: 2px;
+	background-color: #5da8ef;
+}
+
+.quote blockquote {
+	margin: 0;
+	font-family: 'Playfair Display Regular', Times New Roman, serif;
+	font-size: 26px;
+	line-height: 38px;
+	text-align: center;
+	color: #333333;
+}
+
+.quote span {
+	padding-left: 503px; 
+	font-family: 'League Spartan Bold', Arial, sans-serif;
+	font-size: 9px;
+	line-height: 66px;
+	text-transform: uppercase;
+	letter-spacing: 4px;	
+	color: #333333;
+}
+
+.study {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.study p::before {
+	content: ' ';
+	position: absolute;
+	top: 269px;
+	right: 308px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: #5da8ef;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.study p:hover::before {
+	transform: scale(1.1);
+}
+
+.study p::after {
+	content: ' ';
+	position: absolute;
+	top: 293px;
+	right: 321px;
+  transform: scaleX(1.8);
+	border: 10px solid #ffffff;
+	border-bottom-color: transparent;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	z-index: 20;
+	cursor: pointer;
+}
+
+.study p {
+	width: 340px;
+	margin-left: 110px;
+}
+
+.study img:first-of-type {
+	width: 568px;
+	height: 370px;
+}
+
+.study img:last-of-type {
+	position: absolute;
+	top: 45px;
+	left: 482px;
+	width: 698px;
+	height: 502px;
+}
+
+.study .button {
+	margin-left: 110px;
+}
+
+.shop {
+	position: relative;
+	min-height: 650px;
+	margin-top: 165px;
+}
+
+.shop .big-heading {
+	margin-bottom: 550px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.shop ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.shop .board-container {
+	position: relative;
+	width: 250px;
+	height: 320px;
+	background-color: #ececec;
+}
+
+.shop .board-container img {
+	position: absolute;
+	bottom: 21px;
+	left: 11px;
+}
+
+.shop .slider-shop-1,
+.shop .slider-shop-2 {
+	display: none;
+	position: absolute;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	top: 251px;
+	left: -14px;
+	width: 1240px;
+}
+
+.shop .slider-shop-showing {
+	display: flex;
+}
+
+.slider-shop-1 li,
+.slider-shop-2 li {
+	position: relative;
+	width: 400px;
+}
+
+.shop .board-description-container {
+	position: absolute;
+	top: 57px;
+	left: 214px;
+}
+
+.shop span.category {
+	font-family: 'Poppins Light', Arial, sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #7a7a7a;
+}
+
+.shop .name-board {
+	margin: 0;
+	font-family: 'Playfair Display Regular', Times New Roman, serif;
+	font-size: 26px;
+	line-height: 28px;
+	color: #333333;
+}
+
+.shop span.cost {
+	font-family: 'Poppins Light', Arial, sans-serif;
+	font-size: 20px;
+	color: #ce60a8;
+}
+
+.shop .board-cost {
+	margin: 0;
+	margin-left: 57px;
+	margin-top: 45px;
+}
+
+.shop .board-cost .button {
+	line-height: 33px;
+}
+
+.shop .board-cost .cost {
+	line-height: 20px;
+}
+
+.shop-arrows {
+	position: relative;
+}
+
+.shop-arrow {
+	padding: 20px 20px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.shop-arrow:focus {
+	outline: none;
+}
+
+.shop-arrow::before,
+.shop-arrow::after {
+	content: ' ';
+	position: absolute;
+	width: 20px;
+	height: 2px;
+	background-color: #636363;
+}
+
+.shop-arrow::before {
+	width: 19px;
+	top: 7px;
+	left: 20px;
+	transform: rotate(45deg);
+}
+
+.shop-arrow::after {
+	transform: rotate(-45deg);
+}
+
+.shop-arrow-next {
+	position: absolute;
+	top: -207px;
+	right: -54px;
+}
+
+.shop-arrow-back {
+	position: absolute;
+	top: -222px;
+	left: -54px;
+	transform: rotate(180deg);
+}
+
+.shop .shop-arrows + .button {
+	margin-left: 549px;
+}
+
+.surfing-training {
+	margin-top: 160px;
+	position: relative;
+}
+
+.surfing-training::after {
+	content: ' ';
+	position: absolute;
+	bottom: -200px;
+	left: 567px;
+	height: 100px;
+	width: 2px;
+	background-color: #5da8ef;
+}
+
+.surfing-training .training-container {
+	position: relative;
+	width: 340px;
+	margin-top: 85px;
+}
+
+.surfing-training article:first-of-type .training-container::before {
+	content: '01';
+}
+
+.surfing-training article:last-of-type .training-container::before {
+	content: '02';
+}
+
+.surfing-training article:first-of-type .training-container::before,
+.surfing-training article:last-of-type .training-container::before {
+	position: absolute;
+	top: -20px;
+	left: -5px;
+	font-family: 'League Spartan Bold', Arial, sans-serif;
+	color: #f9f9f9;
+	font-size: 130px;
+	line-height: 66px;
+	letter-spacing: 13px;
+	z-index: -1;
+}
+
+.surfing-training .side-heading {
+	position: absolute;
+	transform: rotate(270deg);
+}
+
+.surfing-training .side-heading:first-of-type {
+	top: 14px;
+	right: -58px;
+}
+
+.surfing-training .side-heading:last-of-type {
+	top: 675px;
+	left: 145px;
+}
+
+.surfing-training article:first-of-type {
+	display: flex;
+	justify-content: space-between;
+	width: 1160px;
+	margin-bottom: 122px;
+}
+
+.surfing-training article:last-of-type {
+	display: flex;
+	justify-content: space-between;
+	width: 900px;
+	margin-left: 220px;
+	margin-bottom: 260px;
+}
+
+.surfing-training article:first-of-type .img-container {
+	order: 2;
+	width: 762px;
+	height: 539px;
+	overflow: hidden;
+}
+
+.surfing-training article:last-of-type .img-container {
+	width: 489px;
+	height: 439px;
+	overflow: hidden;
+}
+
+.surfing-training h3 {
+	margin-bottom: 30px;
+}
+
+.surfing-training h3::before,
+.surfing-training h3::after {
+	content: ' ';
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 24px;
+	height: 2px;
+	background-color: #5da8ef;
+}
+
+.join-club {
+	width: 590px;
+	margin: 0 auto;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.join-club > p {
+	margin: 0 auto;
+	width: 568px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.join-club form p {
+	position: relative;
+	text-align: left;
+}
+
+.join-club input {
+	width: 505px;
+	padding-left: 30px;
+	margin-left: 0;
+	border: none;
+	box-shadow: inset 0 1px 0 0 #d9d9d8;
+	background-color: #f5f5f5;
+	font-family: 'League Spartan Bold', Arial, sans-serif;
+	font-size: 9px;
+	line-height: 53px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.join-club input::-webkit-input-placeholder {
+	color: #000000;
+}
+
+.join-club button {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	top: 0px;
+	right: 0px;
+	border: none;
+	background-color: #5da8ef;
+}
+
+.join-club button:hover {
+	cursor: pointer;
+}
+
+.join-club button:focus {
+	outline: none;
+}
+
+.join-club button::before,
+.join-club button::after {
+	content: ' ';
+	position: absolute;
+	width: 15px;
+	height: 2px;
+	background-color: #ffffff;
+}
+
+.join-club button::before {
+	width: 14px;
+	top: 21px;
+	left: 23px;
+	transform: rotate(45deg);
+}
+
+.join-club button::after {
+	transform: rotate(-45deg);
+	top: 31px;
+	left: 23px;
+}
+
+.camp-address {
+	display: flex;
+	justify-content: space-between;
+	width: 1150px;
+	margin-top: 130px;
+	margin-bottom: 95px;
+	margin-left: -100px;
+}
+
+.camp-address p {
+	margin: 0;
+	margin-left: 30px;
+	margin-bottom: 50px;
+	margin-top: 35px;
+	font-family: 'Playfair Display Bold', Times New Roman, serif;
+	font-size: 32px;
+	line-height: 46px;
+	color: #000000;
+}
+
+.camp-address .img-container {
+	order: -1;
+	width: 762px;
+	height: 439px;
+	overflow: hidden;
+}
+
+.main-footer {
+	flex-direction: column;
+	margin: 0 auto;
+	margin-bottom: 95px;
+}
+
+.main-footer-logo {
+	margin-left: 290px;
+}
+
+.main-footer-navigation ul {
+	margin: 0 auto;
+}
+
+.footer-social ul {
+	display: flex;
+	justify-content: space-between;
+	width: 120px;
+	margin: 0 auto;
+}
+
+.footer-social li {
+	display: flex;
+	align-items: flex-end;
+}
